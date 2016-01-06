@@ -4,6 +4,15 @@
   box-sizing: border-box;  /* By default, our browsers are set to following the content-box rule, overwriting that */
 }
 
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+h1 {
+  text-align: center;
+}
+
 .container {
   width: 400px;
   margin: 0 auto;      /* Horizontal centering trick */
