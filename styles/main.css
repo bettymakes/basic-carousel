@@ -1,43 +1,42 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box;  /* By default, our browsers are set to following the content-box rule, overwriting that */
 }
 
 .container {
   width: 400px;
-  margin: 0 auto;
-  position: relative;
+  margin: 0 auto;      /* Horizontal centering trick */
+  position: relative;  /* This allows us to position the back and next relative to the container */
 }
 
 .gallery {
   background-color: tomato;
-  width: 400px;
-  height: 400px;
-  overflow: hidden;
+  width: 400px;      /* This sets the containing boundaries for the gallery */
+  height: 400px;     /* This sets the containing boundaries for the gallery */
   padding: 50px;
 }
 
 .gallery-image {
-  width: 100%;
-  height: auto;
-  display: none;
+  width: 100%;      /* The image will render as wide as .gallery's boundaries */
+  height: auto;     /* The height will adjust accordingly ... This will prevent the aspect ratio from warping */
+  display: none;    /* By default, all the images will NOT be showing */
 }
 
-.is-showing {
-  display: block;
-}
+.is-showing {       /* This is the class that we'll apply to the images dynamically. */
+  display: block;   /* If this class is applied, that image will show */
+}                   /* Note that by default, we've added this class to the first element in the HTML already */
+                    /* This ensures that an image will be displayed on load of the document */
 
 .next,
 .back {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  position: absolute;  /* As mentioned on line 10, the reference point for these buttons is the .container */
+  top: 0;              /* This trick allows us to vertically center our buttons */
+  bottom: 0;           /* This trick allows us to vertically center our buttons */
+  margin: auto;        /* This trick allows us to vertically center our buttons */
 
-  display: block;
   width: 50px;
-  height: auto;
+  height: auto;        /* Similar to line 39, this will prevent the aspect ratio of the image from warping */
 }
 
 .next:hover,
@@ -46,11 +45,11 @@
 }
 
 .next {
-  right: 5px;
-  transform: rotate(90deg);
+  right: 5px;                  /* Moving the next buttons 5px away from the right edge of the .container */
+  transform: rotate(90deg);    /* The image used for the button is pointing upwards, rotating it so that it points to the right */
 }
 
 .back {
-  left: 5px;
-  transform: rotate(-90deg);
+  left: 5px;                  /* Moving the next buttons 5px away from the left edge of the .container */
+  transform: rotate(-90deg);  /* Similar to line 49, rotating the image so that it points to the left */
 }
