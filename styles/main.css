@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
 .gallery {
   background-color: tomato;
   width: 400px;
