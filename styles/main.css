@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.gallery {
+  background-color: tomato;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  padding: 50px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.is-showing {
+  display: block;
+}
+
+.next,
+.back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  display: block;
+  width: 50px;
+  height: auto;
+}
+
+.next:hover,
+.back:hover {
+  cursor: pointer;
+}
+
+.next {
+  left: 5px;
+  transform: rotate(90deg);
+}
+
+.back {
+  right: 5px;
+  transform: rotate(-90deg);
+}
